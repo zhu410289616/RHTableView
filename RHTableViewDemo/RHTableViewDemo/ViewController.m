@@ -52,14 +52,16 @@
     for (NSUInteger i=0; i<20; i++) {
         RHTableViewCellModel *model = [[RHTableViewCellModel alloc] init];
         model.cellData = [NSString stringWithFormat:@"cell data %lu", i];
-        [model setHeightForRowBlock:^CGFloat(UITableView *tableView, NSIndexPath *indexPath) {
+        [model setHeightForRowBlock:^CGFloat(UITableView *tableView, NSIndexPath *indexPath, id cellData) {
             return 50.0f;
         }];
-        __weak typeof(model) weakModel = model;
-        [model setCellForRowBlock:^RHTableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
+        [model setCellForRowBlock:^RHTableViewCell *(UITableView *tableView, NSIndexPath *indexPath, id cellData) {
             RHTableViewCell *cell = [RHTableViewCell tableView:tableView reusedCellOfClass:[RHTableViewCell class]];
-            [cell updateViewWithData:weakModel];
+            [cell updateViewWithData:cellData];
             return cell;
+        }];
+        [model setCellForSelectBlock:^(UITableView *tableView, NSIndexPath *indexPath, id cellData) {
+            NSLog(@"setCellForSelectBlock: %@", cellData);
         }];
         [modelList addObject:model];
     }

@@ -11,16 +11,19 @@
 
 @class RHTableViewCell;
 
-typedef CGFloat(^HeightForRowBlock)(UITableView *tableView, NSIndexPath *indexPath);
-typedef RHTableViewCell *(^CellForRowBlock)(UITableView *tableView, NSIndexPath *indexPath);
+typedef CGFloat(^HeightForRowBlock)(UITableView *tableView, NSIndexPath *indexPath, id cellData);
+typedef RHTableViewCell *(^CellForRowBlock)(UITableView *tableView, NSIndexPath *indexPath, id cellData);
+typedef void(^CellForSelectBlock)(UITableView *tableView, NSIndexPath *indexPath, id cellData);
 
 @interface RHTableViewCellModel : NSObject
 
 @property (nonatomic, strong) id cellData;
 @property (nonatomic, copy, readonly) HeightForRowBlock heightForRowBlock;
 @property (nonatomic, copy, readonly) CellForRowBlock cellForRowBlock;
+@property (nonatomic, copy, readonly) CellForSelectBlock cellForSelectBlock;
 
-- (void)setHeightForRowBlock:(CGFloat(^)(UITableView *tableView, NSIndexPath *indexPath))heightForRowBlock;
-- (void)setCellForRowBlock:(RHTableViewCell *(^)(UITableView *tableView, NSIndexPath *indexPath))cellForRowBlock;
+- (void)setHeightForRowBlock:(CGFloat(^)(UITableView *tableView, NSIndexPath *indexPath, id cellData))heightForRowBlock;
+- (void)setCellForRowBlock:(RHTableViewCell *(^)(UITableView *tableView, NSIndexPath *indexPath, id cellData))cellForRowBlock;
+- (void)setCellForSelectBlock:(void(^)(UITableView *tableView, NSIndexPath *indexPath, id cellData))cellForSelectBlock;
 
 @end

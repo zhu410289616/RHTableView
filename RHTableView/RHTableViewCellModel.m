@@ -11,14 +11,19 @@
 
 @implementation RHTableViewCellModel
 
-- (void)setHeightForRowBlock:(CGFloat (^)(UITableView *tableView, NSIndexPath *indexPath))heightForRowBlock
+- (void)setHeightForRowBlock:(CGFloat (^)(UITableView *tableView, NSIndexPath *indexPath, id cellData))heightForRowBlock
 {
     _heightForRowBlock = heightForRowBlock;
 }
 
-- (void)setCellForRowBlock:(RHTableViewCell *(^)(UITableView *tableView, NSIndexPath *indexPath))cellForRowBlock
+- (void)setCellForRowBlock:(RHTableViewCell *(^)(UITableView *tableView, NSIndexPath *indexPath, id cellData))cellForRowBlock
 {
     _cellForRowBlock = cellForRowBlock;
+}
+
+- (void)setCellForSelectBlock:(void (^)(UITableView *tableView, NSIndexPath *indexPath, id cellData))cellForSelectBlock
+{
+    _cellForSelectBlock = cellForSelectBlock;
 }
 
 @end

@@ -47,7 +47,7 @@
         return [RHTableViewCell tableView:tableView reusedCellOfClass:[RHTableViewCell class]];
     }
     RHTableViewCellModel *model = self.dataArray[indexPath.row];
-    return model.cellForRowBlock(tableView, indexPath);
+    return model.cellForRowBlock(tableView, indexPath, model);
 }
 
 #pragma mark -
@@ -60,9 +60,22 @@
     }
     RHTableViewCellModel *model = self.dataArray[indexPath.row];
     if (model.heightForRowBlock) {
-        return model.heightForRowBlock(tableView, indexPath);
+        return model.heightForRowBlock(tableView, indexPath, model);
     }
     return 44.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    if (self.dataArray.count == 0) {
+        return;
+    }
+    RHTableViewCellModel *model = self.dataArray[indexPath.row];
+    if (model.cellForSelectBlock) {
+        model.cellForSelectBlock(tableView, indexPath, model);
+    }
 }
 
 @end
