@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RHTableView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "RHTableView: Expand from UITableView."
   s.homepage     = "https://github.com/zhu410289616/RHTableView"
   s.license      = { :type => "Apache", :file => "LICENSE" }
