@@ -10,6 +10,32 @@
 
 @implementation RHTableViewCell
 
+static NSMutableDictionary *_cellMap = nil;
+
++ (NSMutableDictionary *)cellMapOfRegistered
+{
+    return _cellMap;
+}
+
++ (void)registerRenderCell:(Class)cellClass type:(NSInteger)type
+{
+    if (!_cellMap) {
+        _cellMap = [[NSMutableDictionary alloc] init];
+    }
+    
+    NSString *className = NSStringFromClass(cellClass);
+    _cellMap[@(type)] = className;
+}
+
++ (Class)cellClassWithType:(NSInteger)type
+{
+    NSString *className = _cellMap[@(type)];
+    if (!className) {
+        className = @"RHTableViewCell";
+    }
+    return NSClassFromString(className);
+}
+
 + (RHTableViewCell *)tableView:(UITableView *)tableView reusedCellOfClass:(Class)cellClass
 {
     NSString *cellIdentifier = NSStringFromClass(cellClass);
@@ -18,6 +44,12 @@
         cell = [[cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     return cell;
+}
+
++ (RHTableViewCell *)tableView:(UITableView *)tableView reusedCellOfType:(NSInteger)type
+{
+    Class cellClass = [self cellClassWithType:type];
+    return [self tableView:tableView reusedCellOfClass:cellClass];
 }
 
 - (void)updateViewWithData:(id)cellData

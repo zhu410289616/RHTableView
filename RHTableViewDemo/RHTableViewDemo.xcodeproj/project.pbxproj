@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8315C1BF1CCC7F1D004F43BA /* RHTableViewTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8315C1BE1CCC7F1D004F43BA /* RHTableViewTestCell.m */; };
 		838307401CBA214E005A2EDB /* RHStretchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383073F1CBA214E005A2EDB /* RHStretchTableView.m */; };
 		83996EB31CBA193C000A1FC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83996EB21CBA193C000A1FC4 /* main.m */; };
 		83996EB61CBA193C000A1FC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83996EB51CBA193C000A1FC4 /* AppDelegate.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8315C1BD1CCC7F1D004F43BA /* RHTableViewTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHTableViewTestCell.h; sourceTree = "<group>"; };
+		8315C1BE1CCC7F1D004F43BA /* RHTableViewTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHTableViewTestCell.m; sourceTree = "<group>"; };
 		8383073E1CBA214E005A2EDB /* RHStretchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHStretchTableView.h; sourceTree = "<group>"; };
 		8383073F1CBA214E005A2EDB /* RHStretchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHStretchTableView.m; sourceTree = "<group>"; };
 		83996EAE1CBA193C000A1FC4 /* RHTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RHTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +86,8 @@
 				83996EBF1CBA193C000A1FC4 /* LaunchScreen.storyboard */,
 				83996EC21CBA193C000A1FC4 /* Info.plist */,
 				83996EB11CBA193C000A1FC4 /* Supporting Files */,
+				8315C1BD1CCC7F1D004F43BA /* RHTableViewTestCell.h */,
+				8315C1BE1CCC7F1D004F43BA /* RHTableViewTestCell.m */,
 			);
 			path = RHTableViewDemo;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				83996EB91CBA193C000A1FC4 /* ViewController.m in Sources */,
 				83996ED11CBA1958000A1FC4 /* RHTableView.m in Sources */,
 				83996ED31CBA1958000A1FC4 /* RHTableViewCell.m in Sources */,
+				8315C1BF1CCC7F1D004F43BA /* RHTableViewTestCell.m in Sources */,
 				83996EB61CBA193C000A1FC4 /* AppDelegate.m in Sources */,
 				83996EB31CBA193C000A1FC4 /* main.m in Sources */,
 			);

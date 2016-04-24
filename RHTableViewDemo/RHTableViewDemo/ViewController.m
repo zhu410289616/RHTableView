@@ -14,6 +14,8 @@
 
 #import "RHStretchTableView.h"
 
+#import "RHTableViewTestCell.h"
+
 @interface ViewController ()
 {
     RHTableView *_tableView;
@@ -56,7 +58,8 @@
             return 50.0f;
         }];
         [model setCellForRowBlock:^RHTableViewCell *(UITableView *tableView, NSIndexPath *indexPath, id cellData) {
-            RHTableViewCell *cell = [RHTableViewCell tableView:tableView reusedCellOfClass:[RHTableViewCell class]];
+//            RHTableViewCell *cell = [RHTableViewCell tableView:tableView reusedCellOfClass:[RHTableViewCell class]];
+            RHTableViewCell *cell = [RHTableViewCell tableView:tableView reusedCellOfType:999];
             [cell updateViewWithData:cellData];
             return cell;
         }];
