@@ -26,4 +26,14 @@
     _cellForSelectBlock = cellForSelectBlock;
 }
 
+- (void)setWillDisplayBlock:(void(^)(UITableView *tableView, NSIndexPath *indexPath, id cellData))willDisplayBlock
+{
+    _willDisplayBlock = willDisplayBlock;
+}
+
+- (void)setCommitEditingBlock:(void (^)(UITableView *tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath *indexPath, id cellData))commitEditingBlock
+{
+    _commitEditingBlock = commitEditingBlock;
+}
+
 @end

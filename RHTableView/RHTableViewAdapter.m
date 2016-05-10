@@ -65,6 +65,17 @@
     return 44.0f;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.dataArray.count == 0) {
+        return;
+    }
+    RHTableViewCellModel *model = self.dataArray[indexPath.row];
+    if (model.willDisplayBlock) {
+        model.willDisplayBlock(tableView, indexPath, model);
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
