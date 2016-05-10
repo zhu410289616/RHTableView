@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831093B61CE1DA9C00563137 /* RHTableViewSectionAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 831093B51CE1DA9C00563137 /* RHTableViewSectionAdapter.m */; };
 		8315C1BF1CCC7F1D004F43BA /* RHTableViewTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8315C1BE1CCC7F1D004F43BA /* RHTableViewTestCell.m */; };
 		838307401CBA214E005A2EDB /* RHStretchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383073F1CBA214E005A2EDB /* RHStretchTableView.m */; };
 		83996EB31CBA193C000A1FC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83996EB21CBA193C000A1FC4 /* main.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		831093B41CE1DA9C00563137 /* RHTableViewSectionAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHTableViewSectionAdapter.h; sourceTree = "<group>"; };
+		831093B51CE1DA9C00563137 /* RHTableViewSectionAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHTableViewSectionAdapter.m; sourceTree = "<group>"; };
 		8315C1BD1CCC7F1D004F43BA /* RHTableViewTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHTableViewTestCell.h; sourceTree = "<group>"; };
 		8315C1BE1CCC7F1D004F43BA /* RHTableViewTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHTableViewTestCell.m; sourceTree = "<group>"; };
 		8383073E1CBA214E005A2EDB /* RHStretchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHStretchTableView.h; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				83996ECE1CBA1958000A1FC4 /* RHTableViewCell.m */,
 				83996ECF1CBA1958000A1FC4 /* RHTableViewCellModel.h */,
 				83996ED01CBA1958000A1FC4 /* RHTableViewCellModel.m */,
+				831093B41CE1DA9C00563137 /* RHTableViewSectionAdapter.h */,
+				831093B51CE1DA9C00563137 /* RHTableViewSectionAdapter.m */,
 			);
 			name = RHTableView;
 			path = ../../RHTableView;
@@ -192,6 +197,7 @@
 				83996ED41CBA1958000A1FC4 /* RHTableViewCellModel.m in Sources */,
 				838307401CBA214E005A2EDB /* RHStretchTableView.m in Sources */,
 				83996ED21CBA1958000A1FC4 /* RHTableViewAdapter.m in Sources */,
+				831093B61CE1DA9C00563137 /* RHTableViewSectionAdapter.m in Sources */,
 				83996EB91CBA193C000A1FC4 /* ViewController.m in Sources */,
 				83996ED11CBA1958000A1FC4 /* RHTableView.m in Sources */,
 				83996ED31CBA1958000A1FC4 /* RHTableViewCell.m in Sources */,
